@@ -1,0 +1,53 @@
+﻿/* Ukázková úloha pro obvodní kolo Soutěže v programování
+ * Dům dětí a mládeže Praha 6
+ * 
+ * Zmáčknutí tlačítka způsobí změnu stavu na vstupu nožičce mikropočítače
+ * z logické nuly (low) do logické edničky (high), výstupní nožička pak 
+ * opakovaně mění stav z nuly na jedničku a naopak.
+ * Je zde rovněž zavedeno ošetření odskoků tlačítka ("debouncing").
+ * 
+ * 
+ */
+
+int vstupPin = 2;         // číslo vstupní nožičky
+int vystupPin = 13;       // číslo výstupní nožičky
+
+int stavVystupu = HIGH;   // současný stav výstupní nožičky
+int vstup;                // současné čtení stavu vstupní nožičky
+int minulyVstup = LOW;    // předchozí stav vstupní nožičky
+
+// čas je v proměnné typu 'long', protože je měřen v milisekundách a rychle tak 
+// dosáhne velkých hodnot, větších, než by bylo možno uložit v typu 'int'
+long cas = 0;          // poslední čas, kdy byl výstup přepnut
+long debounce = 200;   // čas pro potlačení odskoků tlačítka, pokud výstup 
+                       // příliš přeblikává, tento čas prodloužit
+
+void setup()
+{
+  pinMode(vstupPin, INPUT);
+  pinMode(vystupPin, OUTPUT);
+}
+
+void loop()
+{
+  vstup = digitalRead(vstupPin);
+
+  // pokud je vstupní nožička v jedničce (HIGH) a předchozí stav byl nula (LOW)
+  // a zároveň již bylo dost dlouho čekáno (odskoky tlačítka), 
+  // změnit stav výstupu a zapamatovat čas
+  
+  if (vstup == HIGH && minulyVstup == LOW && millis() - cas > debounce) {
+    if (stavVystupu == HIGH)
+      stavVystupu = LOW;
+    else
+      stavVystupu = HIGH;
+
+    cas = millis();    
+  }
+
+  // zapsat nový stav výstupu na výstupní nožičku 
+  digitalWrite(vystupPin, stavVystupu);
+
+  //zapamatování stavu vstupní nožičky
+  minulyVstup = vstup;
+}

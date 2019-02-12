@@ -1,0 +1,1 @@
+﻿Zapojte tlačítko a LED k mikropočítači tak, aby po zmáčknutí tlačítka byla svítivka střídavě rozsvěcena a zhasínána (stiskem zapni, stiskem vypni). 

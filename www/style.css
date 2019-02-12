@@ -1,0 +1,15 @@
+@font-face {
+	font-family: 'Montserrat';
+	src: url('assety/Montserrat-Regular.otf');
+	font-weight: normal;
+}
+@font-face {
+	font-family: 'Montserrat';
+	src: url('assety/Montserrat-Bold.otf');
+	font-weight: bold;
+}
+body {
+	font-family: 'Montserrat', Arial, sans-serif;
+}
+
+/* TODO */

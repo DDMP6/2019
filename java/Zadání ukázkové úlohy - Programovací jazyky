@@ -1,0 +1,6 @@
+Vytvořte vlastní verzi benchmarku SuperPi.
+(Výpočet Pi lze provést např.: https://en.wikipedia.org/wiki/Approximations_of_π)
+SuperPi je program, který počítá Pi na až 32milionů desetinných míst a následně zobrazí dobu,
+kterou trval výpočet. K výpočtu je použit iterativní Gauss-Legendreho algoritmus.
+Velmi rozšířen je program mezi overckery na testování stability PC a srovnání výkonu.
+Řešení může využívat libovolný algoritmus, který umožní měřit dobu výpočtu, interní přesnost stačí v běžném rozsahu.
