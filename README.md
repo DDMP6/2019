@@ -1,6 +1,6 @@
 # Soutěž v programování 2019
 
-# Vypracované řešení v archivu ZIP nebo RAR odevzdávejte na owncloud: https://olympiada2019.tk
+# Vypracované řešení v archivu ZIP nebo RAR odevzdávejte na owncloud: http://olympiada2019.tk
 https://owncloud.cesnet.cz/index.php/s/rtR9JO6obRELGqO
 
 
