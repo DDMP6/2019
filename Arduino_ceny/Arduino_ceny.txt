@@ -1,7 +1,9 @@
 Arduino - ceny
 Displeje
-RFID shieldy
 
+RFID shieldy
+https://www.santy.cz/bezdratova-komunikace-c32/sada-rfid-reader-i188/
+https://navody.arduino-shop.cz/navody-k-produktum/rfid-ctecka-13.56-mhz.html
 Teplo+vlhkoměr 
 https://www.santy.cz/senzory-c24/sa0315-i338/
 Návod: https://navody.arduino-shop.cz/navody-k-produktum/teplotni-senzor-dht11.html
